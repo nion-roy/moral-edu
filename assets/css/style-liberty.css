@@ -16873,19 +16873,22 @@ h3.title-big {
   font-weight: 600;
 }
 
-.video-section ul.w3l-right-book li span {
+.video-section ul.w3l-right-book li span,
+.course-details-section ul.w3l-right-book li span {
   font-size: 12px;
   margin-right: 10px;
   opacity: 0.4;
 }
 
-.video-section .play-view {
+.video-section .play-view,
+.course-details-section .play-view {
   left: 0;
   right: 0;
   top: calc(50% - 40px);
 }
 
-.video-section span.video-play-icon {
+.video-section span.video-play-icon,
+.course-details-section span.video-play-icon {
   display: inline-block;
   width: 80px;
   height: 80px;
@@ -16904,7 +16907,8 @@ h3.title-big {
   background: rgb(12 12 12 / 22%);
 }
 
-.video-section span.video-play-icon:hover {
+.video-section span.video-play-icon:hover,
+.course-details-section span.video-play-icon:hover {
   transform: scale(1.1);
   transition: 0.3s ease-in-out;
 }

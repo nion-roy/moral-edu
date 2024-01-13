@@ -176,6 +176,15 @@
 <!--bootstrap-->
 <script src="assets/js/bootstrap.min.js"></script>
 <!-- //bootstrap-->
+
+<script>
+  $(document).ready(function() {
+    $('.accordion-heading').click(function() {
+      $(this).toggleClass('accordion-open');
+    });
+  });
+</script>
+
 <!-- //Js scripts -->
 
 </html>

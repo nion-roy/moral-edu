@@ -5,7 +5,7 @@
         <a class="text-danger" href="index">
           <img class="img-fluid" src="assets/images/logo.jpg" alt="Moral Learning Institute"> <strong></strong>
         </a>
-      </h4> 
+      </h4>
       <button class="navbar-toggler  collapsed bg-gradient" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
         <span class="navbar-toggler-icon fa icon-close fa-times"></span>
@@ -13,27 +13,16 @@
 
       <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
         <ul class="navbar-nav ml-lg-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="index">Home <span class="sr-only">(current)</span></a>
+          <li class="nav-item <?= ($activePage == 'index') ? 'active' : ''; ?>">
+            <a class="nav-link" href="http://localhost/e-learning/Moral-Edu">Home <span class="sr-only">(current)</span></a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item <?= ($activePage == 'about') ? 'active' : ''; ?>">
             <a class="nav-link" href="about">About</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item <?= ($activePage == 'courses') ? 'active' : ''; ?>">
             <a class="nav-link" href="courses">Courses</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Pages <span class="fa fa-angle-down"></span>
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="blog">Blog Posts</a>
-              <a class="dropdown-item" href="blog-single">Blog Single</a>
-              <a class="dropdown-item" href="error">404 Page</a>
-              <a class="dropdown-item" href="landing-single">Landing Page</a>
-            </div>
-          </li>
-          <li class="nav-item">
+          <li class="nav-item <?= ($activePage == 'contact') ? 'active' : ''; ?>">
             <a class="nav-link" href="contact">Contact Us</a>
           </li>
           <!-- search button -->

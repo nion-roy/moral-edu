@@ -10,26 +10,11 @@
     <?php include 'header-link.php' ?>
 
 
-    <style> 
+    <style>
       .title-main {
         border: 1px solid var(--border-color-light);
         box-shadow: -1px 2px 12px -9px rgba(0, 0, 0, 0.41);
         padding: 8px;
-      } 
-
-      .accordion .card-header:after {
-        font-family: 'FontAwesome';
-        content: "\f068";
-        float: right;
-      }
-
-      .accordion .card-header.collapsed:after {
-        /* symbol for "collapsed" panels */
-        content: "\f067";
-      }
-
-      .collapsed {
-        cursor: pointer;
       }
     </style>
 
@@ -46,7 +31,16 @@
     <!-- banner section -->
 
     <!-- course section -->
-    <?php include 'home_course.php' ?>
+    <div class="w3l-index-block4 pb-5">
+      <div class="features-bg pb-lg-5 pt-lg-4 py-4">
+        <div class="container">
+          <div class="title-main text-center mx-auto mb-md-4 rounded-pill border">
+            <h3 class="title-big">Our <span class="text-success"> Special <span class="text-danger"> Courses </span></h3>
+          </div>
+          <?php include 'home_course.php' ?>
+        </div>
+      </div>
+    </div>
     <!-- course section -->
 
     <!-- about section -->
