@@ -172,10 +172,15 @@
       position: relative;
     }
 
-    .course-details-section .left-wthree-img-video {
+    .course-details-section .left-wthree-img-video-sticky {
       position: sticky;
       top: 12vh;
-      height: 60vh; 
+      height: 100%;
+    }
+
+
+    .margin_bottom {
+      margin-bottom: 4rem;
     }
   </style>
 
@@ -209,17 +214,44 @@
 
           <div class="row">
 
+            <div class="col-lg-5 left-wthree-img-video text-righ pr-lg-5 mt-lg-0 my-5 d-lg-none">
+              <div class="row">
+                <div class="col-12 margin_bottom">
+                  <div class="position-relative text-center">
+                    <img src="assets/images/video.jpg" alt="" class="img-fluid radius-image-full">
+                    <a href="#small-dialog" class="popup-with-zoom-anim play-view text-center position-absolute">
+                      <span class="video-play-icon">
+                        <span class="fa fa-play"></span>
+                      </span>
+                    </a>
+                    <!-- dialog itself, mfp-hide class is required to make dialog hidden -->
+                    <div id="small-dialog" class="zoom-anim-dialog mfp-hide">
+                      <iframe src="https://player.vimeo.com/video/248099609?color=26e5d8&amp;title=0&amp;byline=0&amp;portrait=0" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <div class="course_details">
+                    <h3 class="mb-3 font-weight-bold">Course Details</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur ducimus eaque magnam odio sapiente reiciendis ipsam praesentium, incidunt labore animi itaque quas culpa omnis dolorem repellendus placeat ipsum nisi ea. Veniam voluptatem facere numquam temporibus, laborum facilis laboriosam eius inventore quis ratione necessitatibus nemo voluptates tenetur non blanditiis praesentium reprehenderit labore animi harum? Commodi soluta beatae esse illo dolores, omnis fugiat, minus quisquam dolorum blanditiis consequuntur ex iusto neque deleniti alias debitis, aliquam natus libero similique dolor. Velit impedit error consectetur quae? Ipsum officia accusamus laudantium sunt odio laborum nam, fugit assumenda rerum officiis qui dolor, dolorem cum aperiam?</p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
             <div class="col-lg-7 about-right-accordion align-self pl-lg-5">
 
 
               <div class="row">
-                <div class="col-12 mb-5">
+                <div class="col-12 margin_bottom">
                   <h3 class="title-big">You can watch now our online courses!</h3>
                   <p class="mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni corrupti quas facilis quaerat mollitia dicta quae, provident fugiat eos, nobis minus numquam deserunt doloribus temporibus esse doloremque expedita, ex veniam.</p>
                 </div>
 
-                <div class="col-12">
-                  <div class="courseStudyPlan_summary d-flex align-items-center">
+                <div class="col-12 margin_bottom">
+                  <div class="courseStudyPlan_summary d-flex align-items-center border-bottom pb-3">
                     <h3 class="nowrap text-uppercase font-weight-bold">Study Plan</h3>
                     <div class="d-flex align-items-center">
                       <p class="body_b2 px-2">09 Module</p>
@@ -231,7 +263,7 @@
                   </div>
 
 
-                  <div class="accordion mt-5" id="accordion">
+                  <div class="accordion mt-3" id="accordion">
 
                     <div class="card">
                       <div class="card-header" id="accordionhead1">
@@ -503,14 +535,59 @@
 
                   </div>
                 </div>
+
+                <div class="col-12 margin_bottom">
+                  <h3 class="pb-3 border-bottom font-weight-bold">Course Assessment</h3>
+                  <ul class="ml-4 mt-3">
+                    <li class="d-flex align-items-center">
+                      <div class="dot mr-2"></div> <span>Daily quizzes and assignments</span>
+                    </li>
+                    <li class="d-flex align-items-center">
+                      <div class="dot mr-2"></div> <span>Weekly assessments</span>
+                    </li>
+                    <li class="d-flex align-items-center">
+                      <div class="dot mr-2"></div> <span>Final project for certification: Oral presentation on a chosen topics</span>
+                    </li>
+                  </ul>
+                </div>
+
+
+                <div class="col-12 margin_bottom">
+                  <h3 class="pb-3 border-bottom font-weight-bold">Resources</h3>
+                  <ul class="ml-4 mt-3">
+                    <li class="d-flex align-items-center">
+                      <div class="dot mr-2"></div> <span>Textbook: "Essential Grammar in Use – Raymond Murphy"</span>
+                    </li>
+                    <li class="d-flex align-items-center">
+                      <div class="dot mr-2"></div> <span>Standard lecture sheets</span>
+                    </li>
+                    <li class="d-flex align-items-center">
+                      <div class="dot mr-2"></div> <span>Online various resources for additional practice</span>
+                    </li>
+                    <li class="d-flex align-items-center">
+                      <div class="dot mr-2"></div> <span>Audio and video materials for listening exercises</span>
+                    </li>
+                    <li class="d-flex align-items-center">
+                      <div class="dot mr-2"></div> <span>Comprehensive language club and 9 to 9 support center</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="col-12 margin_bottom">
+                  <h3 class="pb-3 border-bottom font-weight-bold">Note</h3>
+                  <ul class="ml-4 mt-3">
+                    <p>This course outline is flexible and can be adapted based on the specific needs and progress of the participants. Adjustments may be made to cater to the strengths and weaknesses of the class.</p>
+                  </ul>
+                </div>
+
               </div>
 
 
             </div>
 
-            <div class="col-lg-5 left-wthree-img-video text-righ pr-lg-5 mt-lg-0 mt-5">
+            <div class="col-lg-5 left-wthree-img-video left-wthree-img-video-sticky text-righ pr-lg-5 mt-lg-0 mt-5 d-none d-lg-block">
               <div class="row">
-                <div class="col-12 mb-5">
+                <div class="col-12 margin_bottom">
                   <div class="position-relative text-center">
                     <img src="assets/images/video.jpg" alt="" class="img-fluid radius-image-full">
                     <a href="#small-dialog" class="popup-with-zoom-anim play-view text-center position-absolute">
@@ -528,7 +605,7 @@
                 <div class="col-12">
                   <div class="course_details">
                     <h3 class="mb-3 font-weight-bold">Course Details</h3>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit impedit error consectetur quae? Ipsum officia accusamus laudantium sunt odio laborum nam, fugit assumenda rerum officiis qui dolor, dolorem cum aperiam?</p>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur ducimus eaque magnam odio sapiente reiciendis ipsam praesentium, incidunt labore animi itaque quas culpa omnis dolorem repellendus placeat ipsum nisi ea. Veniam voluptatem facere numquam temporibus, laborum facilis laboriosam eius inventore quis ratione necessitatibus nemo voluptates tenetur non blanditiis praesentium reprehenderit labore animi harum? Commodi soluta beatae esse illo dolores, omnis fugiat, minus quisquam dolorum blanditiis consequuntur ex iusto neque deleniti alias debitis, aliquam natus libero similique dolor. Velit impedit error consectetur quae? Ipsum officia accusamus laudantium sunt odio laborum nam, fugit assumenda rerum officiis qui dolor, dolorem cum aperiam?</p>
                   </div>
                 </div>
 
