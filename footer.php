@@ -1,7 +1,7 @@
 <footer class="w3l-footer-22 position-relative">
   <div class="footer-sub">
     <div class="container">
-      <div class="text-txt"> 
+      <div class="text-txt">
         <div class="row sub-columns">
           <div class="col-lg-4 col-md-6 col-sm-8 sub-one-left">
             <h6>About </h6>
@@ -81,5 +81,49 @@
 <button onclick="topFunction()" id="movetop" title="Go to top">
   <span class="fa fa-level-up" aria-hidden="true"></span>
 </button>
+
+
+<!-- partial -->
+<script src="https://cdn.jsdelivr.net/npm/lightgallery@2.0.0-beta.3/lightgallery.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lightgallery@2.0.0-beta.3/plugins/zoom/lg-zoom.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lightgallery@2.0.0-beta.3/plugins/fullscreen/lg-fullscreen.umd.js"></script>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Initialize each gallery container separately
+    const gallery1 = document.getElementById("gallery1");
+    const gallery2 = document.getElementById("gallery2");
+    const gallery3 = document.getElementById("gallery3");
+
+    const initializeGallery = (container) => {
+      lightGallery(container, {
+        speed: 500,
+        plugins: [lgZoom, lgFullscreen],
+      });
+
+      const requestFullScreen = () => {
+        const el = document.documentElement;
+        if (el.requestFullscreen) {
+          el.requestFullscreen();
+        } else if (el.msRequestFullscreen) {
+          el.msRequestFullscreen();
+        } else if (el.mozRequestFullScreen) {
+          el.mozRequestFullScreen();
+        } else if (el.webkitRequestFullscreen) {
+          el.webkitRequestFullscreen();
+        }
+      };
+
+      container.addEventListener("lgAfterOpen", () => {
+        requestFullScreen();
+      });
+    };
+
+    initializeGallery(gallery1);
+    initializeGallery(gallery2);
+    initializeGallery(gallery3);
+  });
+</script>
 
 <?php include 'script.php' ?>

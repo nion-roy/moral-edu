@@ -44,11 +44,11 @@
     <!-- course section -->
 
     <!-- about section -->
-    <?php include 'home_about.php' ?>
+    <?php include 'home_why_choose_us.php' ?>
     <!-- about section -->
 
     <!-- why choose us section -->
-    <?php include 'home_why_choose_us.php' ?>
+    <?php include 'home_faq.php' ?>
     <!-- why choose us section -->
 
     <!-- teacher block -->
