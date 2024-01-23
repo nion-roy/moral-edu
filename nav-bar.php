@@ -22,6 +22,9 @@
           <li class="nav-item <?= ($activePage == 'courses') ? 'active' : ''; ?>">
             <a class="nav-link" href="courses">Courses</a>
           </li>
+          <li class="nav-item <?= ($activePage == 'gallery') ? 'active' : ''; ?>">
+            <a class="nav-link" href="gallery">Gallery</a>
+          </li>
           <li class="nav-item <?= ($activePage == 'contact') ? 'active' : ''; ?>">
             <a class="nav-link" href="contact">Contact Us</a>
           </li>

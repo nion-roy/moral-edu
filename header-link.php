@@ -8,7 +8,20 @@
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.0.0-beta.3/css/lightgallery.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.0.0-beta.3/css/lg-zoom.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.0.0-beta.3/css/lg-fullscreen.css" />
+
 <link rel="stylesheet" href="assets/css/style-liberty.css">
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 
 <?php $activePage = basename($_SERVER['PHP_SELF'], ".php"); ?>
+
+<style>
+  .lg-backdrop,
+  #lg-backdrop-1 {
+    background: rgba(0, 0, 0, 0.8);
+  }
+</style>
