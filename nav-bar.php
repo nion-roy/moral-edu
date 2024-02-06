@@ -14,16 +14,30 @@
       <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
         <ul class="navbar-nav ml-lg-auto">
           <li class="nav-item <?= ($activePage == 'index') ? 'active' : ''; ?>">
-            <a class="nav-link" href="http://localhost/e-learning/Moral-Edu">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="index">Home <span class="sr-only">(current)</span></a>
           </li>
-          <li class="nav-item <?= ($activePage == 'about') ? 'active' : ''; ?>">
-            <a class="nav-link" href="about">About</a>
+
+
+          <li class="nav-item">
+            <a class="nav-link dropdown-toggle <?= ($activePage == 'about' || $activePage == 'team' || $activePage == 'teacher' || $activePage == 'success-students') ? 'active' : ''; ?>" href="#" id="navbarDropdown" data-toggle="dropdown">
+              About <span class="fa fa-angle-down"></span>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item <?= ($activePage == 'about') ? 'active' : ''; ?>" href="about">About Us</a>
+              <a class="dropdown-item <?= ($activePage == 'team') ? 'active' : ''; ?>" href="team">Our Team</a>
+              <a class="dropdown-item <?= ($activePage == 'teacher') ? 'active' : ''; ?>" href="teacher">Our Teachers</a>
+              <a class="dropdown-item <?= ($activePage == 'success-students') ? 'active' : ''; ?>" href="success-students">Success Students</a>
+            </div>
           </li>
+
           <li class="nav-item <?= ($activePage == 'courses') ? 'active' : ''; ?>">
             <a class="nav-link" href="courses">Courses</a>
           </li>
           <li class="nav-item <?= ($activePage == 'gallery') ? 'active' : ''; ?>">
             <a class="nav-link" href="gallery">Gallery</a>
+          </li>
+          <li class="nav-item <?= ($activePage == 'blog') ? 'active' : ''; ?>">
+            <a class="nav-link" href="blog">Blog</a>
           </li>
           <li class="nav-item <?= ($activePage == 'contact') ? 'active' : ''; ?>">
             <a class="nav-link" href="contact">Contact Us</a>

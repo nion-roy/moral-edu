@@ -158,6 +158,34 @@
   })
 </script>
 <!-- //for testimonials carousel -->
+<script>
+  $(document).ready(function() {
+    $("#owl-demo2").owlCarousel({
+      loop: true,
+      margin: 20,
+      autoplay: true,
+      autoplayTimeout: 5000,
+      autoplayHoverPause: true,
+      responsiveClass: true,
+      responsive: {
+        0: {
+          items: 1,
+          nav: true
+        },
+        600: {
+          items: 1,
+          nav: false
+        },
+        1000: {
+          items: 1,
+          nav: true,
+          loop: true
+        }
+      }
+    })
+  })
+</script>
+<!-- //for testimonials carousel -->
 
 <!-- disable body scroll which navbar is in active -->
 <script>

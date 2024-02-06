@@ -1,5 +1,5 @@
-<footer class="w3l-footer-22 position-relative">
-  <div class="footer-sub">
+<footer class="w3l-footer-22 position-relative border-top">
+  <div class="footer-sub m-0">
     <div class="container">
       <div class="text-txt">
         <div class="row sub-columns">
@@ -87,6 +87,16 @@
 <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.0.0-beta.3/lightgallery.umd.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.0.0-beta.3/plugins/zoom/lg-zoom.umd.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.0.0-beta.3/plugins/fullscreen/lg-fullscreen.umd.js"></script>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+  AOS.init({
+    duration: 1200,
+    delay: 200,
+    offset: 200,
+  })
+</script>
 
 
 <script>
