@@ -193,7 +193,7 @@
   <!-- header -->
 
   <!-- inner banner -->
-  <div class="inner-banner">
+  <div class="inner-banner border-bottom">
     <section class="w3l-breadcrumb">
       <div class="container">
         <h4 class="inner-text-title font-weight-bold mb-sm-3 mb-2">line Courses</h4>
@@ -207,9 +207,9 @@
   <!-- inner banner -->
 
   <!-- course details section -->
-  <section class="course-details-section">
-    <div class="w3l-index-block4 pb-5">
-      <div class="course-details-bg pb-lg-5 pt-lg-4 py-4">
+  <section class="course-details-section py-5">
+    <div class="w3l-index-block4">
+      <div class="course-details-bg py-5">
         <div class="container">
 
           <div class="row">

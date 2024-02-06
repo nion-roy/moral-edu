@@ -1,8 +1,8 @@
-<section class="video-section">
+<section class="video-section overflow-hidden py-5" id="video">
   <div class="midd-w3 py-5">
     <div class="container">
       <div class="row mb-lg-2">
-        <div class="col-lg-6 about-right-faq align-self pl-lg-5">
+        <div class="col-lg-6 about-right-faq align-self pl-lg-5" data-aos="fade-down" data-aos-anchor-placement="top-bottom" data-aos-delay="100">
           <h3 class="title-big">You can watch now our online courses!</h3>
           <p class="mt-3">Lorem ipsum viverra feugiat. Pellen tesque libero ut justo,
             ultrices in ligula. Semper at tempufddfel. Lorem ipsum dolor sit amet consectetur
@@ -11,7 +11,7 @@
           <a class="btn button-style mt-lg-5 mt-4 popup-with-zoom-anim play-view" href="#small-dialog">Play Video<i class="fa fa-angle-double-right" aria-hidden="true"></i>
           </a>
         </div>
-        <div class="col-lg-6 left-wthree-img-video text-righ pr-lg-5 mt-lg-0 mt-5">
+        <div class="col-lg-6 left-wthree-img-video text-righ pr-lg-5 mt-lg-0 mt-5" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="100">
           <div class="position-relative text-center">
             <img src="assets/images/video.jpg" alt="" class="img-fluid radius-image-full">
             <a href="#small-dialog" class="popup-with-zoom-anim play-view text-center position-absolute">

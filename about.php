@@ -8,6 +8,17 @@
 
   <?php include 'header-link.php' ?>
 
+  <style>
+    .w3l-text-6 .text-6-mian h2 {
+      line-height: 20px;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+      font-weight: 600;
+      padding: 8px 8px 8px 15px;
+      border-left: 2px solid var(--secondary-color);
+    }
+  </style>
+
 </head>
 
 <body>
@@ -16,7 +27,7 @@
   <!--header-->
 
   <!-- inner banner -->
-  <div class="inner-banner">
+  <div class="inner-banner border-bottom">
     <section class="w3l-breadcrumb">
       <div class="container">
         <h4 class="inner-text-title font-weight-bold mb-sm-3 mb-2">About Us</h4>
@@ -30,20 +41,23 @@
   <!-- inner banner -->
 
   <!-- about section -->
-  <section class="w3l-text-6 py-5" id="about">
+  <section class="w3l-text-6 py-5 overflow-hidden" id="about">
     <div class="text-6-mian py-md-4 py-3">
       <div class="container">
+
+        <?php
+        $query_about = "SELECT * FROM about_section ORDER BY id DESC LIMIT 1";
+        $result_about = mysqli_query($con, $query_about);
+        $row = mysqli_fetch_assoc($result_about);
+        ?>
+
         <div class="row top-cont-grid align-items-center">
-          <div class="col-lg-6 left-img pr-lg-4">
-            <img src="assets/images/about.jpg" alt="" class="img-responsive img-fluid" />
+          <div class="col-lg-6 left-img pr-lg-4" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="100">
+            <img src="moral-edu/user/user_images/<?= $row['userPic'] ?>" alt="" class="img-responsive img-fluid" />
           </div>
-          <div class="col-lg-6 text-6-info mb-lg-0 mb-4 pl-lg-5">
-            <h6>Online Study</h6>
-            <h2>Welcome to our <span>Website</span></h2>
-            <p>Aenean pulvinar pharetra pellentesque. Cras dignissim, sapien ac tempus bibendum, eros massa
-              fermentum
-              massa, in eleifend ipsum quam vel magna.Maecenas viverra, leo eget semper ultrices.</p>
-            <a href="blog-single.html" class="btn button-style mt-sm-5 mt-4">Read More<i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+          <div class="col-lg-6 text-6-info mb-lg-0 mb-4 pl-lg-5" data-aos="fade-down" data-aos-anchor-placement="top-bottom" data-aos-delay="100">
+            <h2><?= $row['about_title'] ?></h2>
+            <p><?= $row['about_subtitle'] ?></p>
           </div>
         </div>
       </div>
@@ -51,57 +65,17 @@
   </section>
   <!-- about section -->
 
-  <!-- about block 3 -->
-  <section class="about-block-3 py-5">
-    <div class="grids-w3ovt py-md-4 py-3">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4 mb-md-0 mb-5">
-            <div class="bg-color-block-2">
-              <h6 class="top-grid-text text-uppercase"><label>01.</label>Our Values</h6>
-              <h3 class="grid-one-text mt-2 mb-4">Nam vehicula neque id purus malesuada aliquam</h3>
-              <p>Donec interdum magna ac libero mattis porta. Nulla in mauris aliquam convallis. Mauris
-                vitae ante nec augue.</p>
-            </div>
-          </div>
-          <div class="col-md-4 mb-md-0 mb-5">
-            <div class="bg-color-block-2">
-              <h6 class="top-grid-text text-uppercase"><label>02.</label>Who We Are</h6>
-              <h3 class="grid-one-text mt-2 mb-4">Nam vehicula neque id purus malesuada aliquam</h3>
-              <p>Donec interdum magna ac libero mattis porta. Nulla in mauris aliquam convallis. Mauris
-                vitae ante nec augue.</p>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="bg-color-block-2">
-              <h6 class="top-grid-text text-uppercase"><label>03.</label>What We Do</h6>
-              <h3 class="grid-one-text mt-2 mb-4">Nam vehicula neque id purus malesuada aliquam</h3>
-              <p>Donec interdum magna ac libero mattis porta. Nulla in mauris aliquam convallis. Mauris
-                vitae ante nec augue.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- about block 3 -->
+  <?php include 'mission.php' ?>
+
+  <?php include 'visions.php' ?>
 
   <!-- stats -->
   <?php include 'home_stats.php' ?>
   <!-- stats -->
 
-  <!-- video section -->
-  <?php include 'video_section.php' ?>
-  <!-- video section -->
-
   <!-- testimonials -->
   <?php include 'home_testimonial.php' ?>
   <!-- testimonials-->
 
-  <!-- teams 32 block -->
-  <?php include 'home_teacher.php' ?>
-  <!-- teams 32 block -->
-
   <!-- footer -->
-
   <?php include 'footer.php' ?>

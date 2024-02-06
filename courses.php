@@ -1,3 +1,6 @@
+<?php require_once 'moral-edu/includes/conn.php'; ?>
+<?php require_once 'moral-edu/includes/dbconfig.php'; ?>
+
 <!doctype html>
 <html lang="en">
 
@@ -17,7 +20,7 @@
   <!-- header -->
 
   <!-- inner banner -->
-  <div class="inner-banner">
+  <div class="inner-banner border-bottom">
     <section class="w3l-breadcrumb">
       <div class="container">
         <h4 class="inner-text-title font-weight-bold mb-sm-3 mb-2">Online Courses</h4>
@@ -31,13 +34,7 @@
   <!-- inner banner -->
 
   <!-- course section -->
-  <div class="w3l-index-block4 pb-5">
-    <div class="features-bg pb-lg-5 pt-lg-4 py-4">
-      <div class="container">
-        <?php include 'home_course.php' ?>
-      </div>
-    </div>
-  </div>
+  <?php include 'home_course.php' ?>
   <!-- course section -->
 
   <!-- stats -->

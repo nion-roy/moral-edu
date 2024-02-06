@@ -1,144 +1,41 @@
-<div class="row">
-
-  <div class="col-lg-4 col-md-6 features15-col-text">
-    <a href="courses-details" class="d-flex feature-unit align-items-center">
-      <div class="col-12 text-center">
-        <div class="features15-info">
-          <img class="img-fluid" src="assets/images/course/Spoken-English.png" alt=" ">
-        </div>
-        <div class="features15-para">
-          <h6>English</h6>
-          <h4>Smart Communicative English </h4>
-        </div>
+<div class="w3l-index-block4 py-5" id="course">
+  <div class="pb-lg-5 pt-lg-4 py-4">
+    <div class="container">
+      <div class="title-main text-center bg-white mx-auto my-md-4 rounded-pill border" data-aos="fade-top" data-aos-anchor-placement="top-bottom" data-aos-delay="100">
+        <h3 class="title-big">Our <span class="text-success"> Special <span class="text-danger"> Courses </span></h3>
       </div>
-    </a>
-  </div>
 
-  <div class="col-lg-4 col-md-6 features15-col-text">
-    <a href="courses-details" class="d-flex feature-unit align-items-center">
-      <div class="col-12 text-center">
-        <div class="features15-info">
-          <img class="img-fluid" src="assets/images/course/IELTS.png" alt="IELTS Preparation">
-        </div>
-        <div class="features15-para">
-          <h6>IELTS</h6>
-          <h4>IELTS Preparation</h4>
-        </div>
+      <div class="row">
+
+        <?php
+        $sl = 0;
+        $query_course = "SELECT s.*, sc.cat_name FROM service s INNER JOIN service_category sc ON s.category_id = sc.cat_id ORDER BY s.sv_id DESC";
+        $result_course = mysqli_query($con, $query_course);
+
+        if (mysqli_num_rows($result_course) > 0) {
+          while ($row = mysqli_fetch_assoc($result_course)) {
+        ?>
+            <div class="col-lg-4 col-md-6 features15-col-text" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="<?= ++$sl ?>00">
+              <a href="courses-details" class="d-flex feature-unit align-items-center bg-white">
+                <div class="col-12 text-center">
+                  <div class="features15-info">
+                    <img class="img-fluid" src="moral-edu/user/user_images/<?php echo $row['userPic']; ?>" alt="<?= $row['sv_name'] ?>">
+                  </div>
+                  <div class="features15-para">
+                    <h6><?= $row['cat_name'] ?></h6>
+                    <h4><?= $row['sv_name'] ?></h4>
+                  </div>
+                </div>
+              </a>
+            </div>
+        <?php
+          }
+        } else {
+          echo "No course found<br>";
+        }
+        ?>
+
       </div>
-    </a>
+    </div>
   </div>
-
-  <div class="col-lg-4 col-md-6 features15-col-text">
-    <a href="courses-details" class="d-flex feature-unit align-items-center">
-      <div class="col-12 text-center">
-        <div class="features15-info">
-          <img class="img-fluid" src="assets/images/course/Korean-Language.png" alt=" ">
-        </div>
-        <div class="features15-para">
-          <h6>Korean</h6>
-          <h4>Korean Language</h4>
-        </div>
-      </div>
-    </a>
-  </div>
-
-  <div class="col-lg-4 col-md-6 features15-col-text">
-    <a href="courses-details" class="d-flex feature-unit align-items-center">
-      <div class="col-12 text-center">
-        <div class="features15-info">
-          <img class="img-fluid" src="assets/images/course/Japanese-Language.png" alt=" ">
-        </div>
-        <div class="features15-para">
-          <h6>Japanese</h6>
-          <h4>Japanese Language </h4>
-        </div>
-      </div>
-    </a>
-  </div>
-
-  <div class="col-lg-4 col-md-6 features15-col-text">
-    <a href="courses-details" class="d-flex feature-unit align-items-center">
-      <div class="col-12 text-center">
-        <div class="features15-info">
-          <img class="img-fluid" src="assets/images/course/Soft-Skills-Development.png" alt="IELTS Preparation">
-        </div>
-        <div class="features15-para">
-          <h6>Soft Skill </h6>
-          <h4>Soft Skill Development</h4>
-        </div>
-      </div>
-    </a>
-  </div>
-
-  <div class="col-lg-4 col-md-6 features15-col-text">
-    <a href="courses-details" class="d-flex feature-unit align-items-center">
-      <div class="col-12 text-center">
-        <div class="features15-info">
-          <img class="img-fluid" src="assets/images/course/Hospitality-Tourism-&-Management.png" alt=" ">
-        </div>
-        <div class="features15-para">
-          <h6> Tourism</h6>
-          <h4>Hospitality & Tourism </h4>
-        </div>
-      </div>
-    </a>
-  </div>
-
-  <div class="col-lg-4 col-md-6 features15-col-text">
-    <a href="courses-details" class="d-flex feature-unit align-items-center">
-      <div class="col-12 text-center">
-        <div class="features15-info">
-          <img class="img-fluid" src="assets/images/course/Caregiver-Training.png" alt=" ">
-        </div>
-        <div class="features15-para">
-          <h6> Caregiver</h6>
-          <h4>Caregiver Training </h4>
-        </div>
-      </div>
-    </a>
-  </div>
-
-  <div class="col-lg-4 col-md-6 features15-col-text">
-    <a href="courses-details" class="d-flex feature-unit align-items-center">
-      <div class="col-12 text-center">
-        <div class="features15-info">
-          <img class="img-fluid" src="assets/images/course/Mental-Health-Development.png" alt=" ">
-        </div>
-        <div class="features15-para">
-          <h6> Mental Health</h6>
-          <h4>Mental Health Development</h4>
-        </div>
-      </div>
-    </a>
-  </div>
-
-  <div class="col-lg-4 col-md-6 features15-col-text">
-    <a href="courses-details" class="d-flex feature-unit align-items-center">
-      <div class="col-12 text-center">
-        <div class="features15-info">
-          <img class="img-fluid" src="assets/images/course/Chinese-Language.png" alt=" ">
-        </div>
-        <div class="features15-para">
-          <h6> Chinese</h6>
-          <h4>Chinese Language</h4>
-        </div>
-      </div>
-    </a>
-  </div>
-
-  <div class="col-lg-4 col-md-6 features15-col-text">
-    <a href="courses-details" class="d-flex feature-unit align-items-center">
-      <div class="col-12 text-center">
-        <div class="features15-info">
-          <img class="img-fluid" src="assets/images/course/Foundation-in-English.png" alt=" ">
-        </div>
-        <div class="features15-para">
-          <h6> Foundation English</h6>
-          <h4>Foundation in English</h4>
-        </div>
-      </div>
-    </a>
-  </div>
-
-
 </div>

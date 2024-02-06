@@ -1,12 +1,12 @@
 <style>
   #main {
-    margin: 50px 0;
+    margin-top: 1rem;
   }
 
   #main #faq .card {
     margin-bottom: 20px;
     border: 0;
-    background-color: var(--bg-light);
+    background-color: var(--white);
     border-radius: 4px;
     border: 1px solid var(--border-color-light);
   }
@@ -14,7 +14,7 @@
   #main #faq .card .card-header {
     padding: 0;
     border: 0;
-    background: transparent;
+    background-color: var(--white);
   }
 
   #main #faq .card .card-header .btn-header-link {
@@ -52,11 +52,11 @@
   }
 </style>
 
-<section class="w3l-servicesblock py-md-5 py-4">
-  <div class="container pb-2">
+<section class="w3l-faq py-4 overflow-hidden" id="faq">
+  <div class="container py-5">
     <div class="row align-items-center">
 
-      <div class="col-lg-6 about-right-faq align-self mb-lg-0 mb-5 pl-xl-5">
+      <div class="col-lg-6 about-right-faq align-self mb-lg-0 mb-5 pl-xl-5" data-aos="fade-down" data-aos-anchor-placement="top-bottom" data-aos-delay="100">
         <h3 class="title-big mb-3">Frequently Asked Question</h3>
         <p class="">Lorem ipsum viverra feugiat. Pellen tesque libero ut justo,
           ultrices in ligula. Semper at tempufddfel. Lorem ipsum dolor sit amet.
@@ -96,7 +96,7 @@
                 </div>
               </div>
             </div>
-            <div class="card">
+            <div class="card m-0">
               <div class="card-header" id="faqhead3">
                 <a href="#" class="btn btn-header-link collapsed" style="color: inherit;" data-toggle="collapse" data-target="#faq3">Why Choose Us</a>
               </div>
@@ -118,7 +118,7 @@
 
       </div>
 
-      <div class="col-lg-6 left-wthree-img pr-lg-4">
+      <div class="col-lg-6 left-wthree-img pr-lg-4" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="100">
         <img src="assets/images/img1.jpg" alt="" class="img-fluid">
       </div>
 

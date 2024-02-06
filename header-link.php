@@ -1,3 +1,6 @@
+<?php require_once 'moral-edu/includes/conn.php'; ?>
+<?php require_once 'moral-edu/includes/dbconfig.php'; ?>
+
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>Moral Learning Institute</title>
@@ -14,6 +17,10 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.0.0-beta.3/css/lg-zoom.css" />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.0.0-beta.3/css/lg-fullscreen.css" />
 
+<link rel="stylesheet" href="assets/css/team.css">
+
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 <link rel="stylesheet" href="assets/css/style-liberty.css">
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 
@@ -23,5 +30,22 @@
   .lg-backdrop,
   #lg-backdrop-1 {
     background: rgba(0, 0, 0, 0.8);
+  }
+
+  #course,
+  #faq,
+  #about,
+  #visions,
+  #video,
+  #team {
+    background: var(--bg-light);
+  }
+
+  #course h4 {
+    color: #000;
+  }
+
+  #course .features15-col-text:hover h4 {
+    color: var(--secondary-color);
   }
 </style>

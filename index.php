@@ -16,6 +16,10 @@
         box-shadow: -1px 2px 12px -9px rgba(0, 0, 0, 0.41);
         padding: 8px;
       }
+
+      .w3l-companies-hny-6 .owl-carousel .owl-item img {
+        border-radius: 4px;
+      }
     </style>
 
   </head>
@@ -31,16 +35,7 @@
     <!-- banner section -->
 
     <!-- course section -->
-    <div class="w3l-index-block4 pb-5">
-      <div class="features-bg pb-lg-5 pt-lg-4 py-4">
-        <div class="container">
-          <div class="title-main text-center mx-auto mb-md-4 rounded-pill border">
-            <h3 class="title-big">Our <span class="text-success"> Special <span class="text-danger"> Courses </span></h3>
-          </div>
-          <?php include 'home_course.php' ?>
-        </div>
-      </div>
-    </div>
+    <?php include 'home_course.php' ?>
     <!-- course section -->
 
     <!-- about section -->

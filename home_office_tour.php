@@ -1,13 +1,13 @@
 <div class="w3l-grids-block-5 py-5">
-  <section id="grids5-block" class="pt-md-4 pb-md-5 py-4">
-    <div class="container">
+  <section id="grids5-block">
+    <div class="container py-5">
 
       <div class="title-main text-center mx-auto mb-md-4 rounded-pill border">
         <h3 class="title-big">Our <span class="text-success"> Office <span class="text-danger"> Tour </span></h3>
       </div>
 
       <div class="row mt-5 text-center">
-        <div class="col-lg-4 col-sm-6 mb-4">
+        <div class="col-lg-4 col-sm-6 my-3" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="100">
           <div class="grids5-info">
             <div class="gallery-container" id="gallery1">
               <a class="gallery-item" data-src="assets/images/blog1.jpg">
@@ -20,7 +20,7 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-4 col-sm-6 mb-4">
+        <div class="col-lg-4 col-sm-6 my-3" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="200">
           <div class="grids5-info">
             <div class="gallery-container" id="gallery2">
               <a class="gallery-item" data-src="assets/images/blog2.jpg">
@@ -33,7 +33,7 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-4 col-sm-6 mb-4">
+        <div class="col-lg-4 col-sm-6 my-3" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="300">
           <div class="grids5-info">
             <div class="gallery-container" id="gallery3">
               <a class="gallery-item" data-src="assets/images/blog3.jpg">

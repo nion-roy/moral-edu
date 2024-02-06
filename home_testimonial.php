@@ -1,6 +1,6 @@
 <section class="w3l-companies-hny-6 position-relative">
   <div class="cusrtomer-layout py-5">
-    <div class="container py-md-4 py-3">
+    <div class="container py-5">
  
       <div class="title-main text-center mx-auto mb-md-4 rounded-pill border">
         <h3 class="title-big">What <span class="text-success"> Our People <span class="text-danger"> Say </span></h3>
