@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 31, 2024 at 01:43 PM
+-- Generation Time: Feb 11, 2024 at 01:01 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 7.3.33
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `digital_training_center`
+-- Database: `moral_edu`
 --
 
 -- --------------------------------------------------------
@@ -40,7 +40,7 @@ CREATE TABLE `about_section` (
 --
 
 INSERT INTO `about_section` (`id`, `user_id`, `about_title`, `about_subtitle`, `userPic`) VALUES
-(17, 140, 'Welcome To Progati Security Services Ltd.', '<p><span style=\"font-size: 12pt;\">The progress of Prince Education Group in 2007. The institute started its debut with only 30 students from the academic year 2007-2008 under the Bangladesh State Medical Faculty, approved by the Ministry of Health and Family Welfare. A group of talented, efficient and incredibly hard-working officials and teachers are the collaborators in crossing the impassable path of this dream journey. The journey of the college has started with the belief that there will be a fair environment for learning, academic education of students as well as physical and mental talent development and moral education of students. A politics, smoking and terror free environment prevails at all times. 18 more institutions have joined this long journey. </span><br /><br /><span style=\"font-size: 12pt;\">After all, Prince Education Group is a big family today. Prince Education Group includes- Prince Nursing College-Savar-Dhaka, Prince Polytechnic Institute-Savar-Dhaka, Prince Institute of Medical Technology-Savar-Dhaka, Prince Medical Assistant Training School (MATS) Savar-Dhaka, Gopalganj Russell Nursing College- Muksudpur-Gopalganj, Prince Polytechnic Institute-Muksudpur-Gopalganj, Prince Medical Institute-Muksudpur-Gopalganj, Western Medical Institute-Faridpur Sadar-Faridpur, Dhamrai Prince Polytechnic and Medical Institute-Dhamrai-Dhaka, Gheor Polytechnic Institute-Manikganj Sadar-Manikganj.</span></p>', 'prince-310637-about1.jpg');
+(17, 140, 'About Us', '<p><span style=\"font-size: 12pt;\">The progress of Prince Education Group in 2007. The institute started its debut with only 30 students from the academic year 2007-2008 under the Bangladesh State Medical Faculty, approved by the Ministry of Health and Family Welfare. A group of talented, efficient and incredibly hard-working officials and teachers are the collaborators in crossing the impassable path of this dream journey. The journey of the college has started with the belief that there will be a fair environment for learning, academic education of students as well as physical and mental talent development and moral education of students. A politics, smoking and terror free environment prevails at all times. 18 more institutions have joined this long journey. </span></p>', 'prince-310637-about1.jpg');
 
 -- --------------------------------------------------------
 
@@ -273,6 +273,30 @@ INSERT INTO `bld_grp` (`bld_id`, `user_id`, `bld_name`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `blog_section`
+--
+
+CREATE TABLE `blog_section` (
+  `id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `title` varchar(255) DEFAULT NULL,
+  `slug` varchar(255) DEFAULT NULL,
+  `details` text DEFAULT NULL,
+  `userPic` varchar(255) DEFAULT NULL,
+  `date` date NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `blog_section`
+--
+
+INSERT INTO `blog_section` (`id`, `user_id`, `title`, `slug`, `details`, `userPic`, `date`) VALUES
+(1, 140, 'Sed ut fuga Dolorib', 'sed-ut-fuga-dolorib', '<p>Sed ut fuga Dolorib</p>', 'prince-202650-06.jpg', '2024-02-08'),
+(4, 140, 'Adipisicing elit. Earum beatae, eius voluptates lorem ipsum dolor sit amet consectetur.', 'adipisicing-elit-earum-beatae-eius-voluptates-lorem-ipsum-dolor-sit-amet-consectetur', '<p><span style=\"font-size: 12pt;\">Computer Science Engineering encompasses studies on the design, analysis, implementation, and application of computer technology. Computing plays a vital role in all fields, including science and medicine, music and art, business, law, and human communication; hence, the study of computer science and engineering can be interdisciplinary in nature.</span></p>\r\n<p><span style=\"font-size: 12pt;\">A computer engineer is responsible for constructing and managing an organization&rsquo;s computer system and providing technical support to the organization. A computer engineer typically works in an office or laboratory environment as part of a team and enjoys a traditional work schedule. A computer engineer, who may be a software engineer, is responsible for developing, testing, and evaluating the software that enables our computer to work. They may help in the development of new computer games and business applications or even in the design of entirely new operating systems. Whether a student&rsquo;s goal is to become a computing professional, DTI is committed to helping them gain the background they need to be a world class engineer.</span></p>\r\n<p>&nbsp;</p>\r\n<p><span style=\"font-size: 12pt;\"><strong>Objectives &amp; Outcomes:</strong></span></p>\r\n<p><span style=\"font-size: 12pt;\">&bull;&nbsp; Provides the highest quality education so that students can cope with both undergraduate and graduate program.</span><br /><span style=\"font-size: 12pt;\">&bull; Provides state-of-the-art education.</span><br /><span style=\"font-size: 12pt;\">&bull; Establish a productive Computer Science and Engineering career in industry, academia, or government sector.</span><br /><span style=\"font-size: 12pt;\">&bull; Ensure career development in the field of computer systems engineering or software systems engineering.</span><br /><span style=\"font-size: 12pt;\">&bull; Students will be trained in such a way that they can work as a team member or be able to lead a team effectively.</span><br /><span style=\"font-size: 12pt;\">&bull; Students will learn the development of innovative systems and solutions using hardware and software</span><br /><span style=\"font-size: 12pt;\">integration.</span></p>\r\n<p>&nbsp;</p>\r\n<p><span style=\"font-size: 12pt;\"><strong>Course Outline:</strong></span></p>\r\n<div class=\"row\">\r\n<div class=\"col-md-3\">\r\n<ul>\r\n<li><span style=\"font-size: 12pt;\"><strong>SEMESTER-1</strong></span></li>\r\n<li><span style=\"font-size: 12pt;\">Engineering Drawing</span></li>\r\n<li><span style=\"font-size: 12pt;\">Computer Fundamental</span></li>\r\n<li><span style=\"font-size: 12pt;\">Computer Application-1</span></li>\r\n<li><span style=\"font-size: 12pt;\">Basic Electricity</span></li>\r\n<li><span style=\"font-size: 12pt;\">Applied English</span></li>\r\n<li><span style=\"font-size: 12pt;\">Mathematics-1</span></li>\r\n<li><span style=\"font-size: 12pt;\">Chemistry</span></li>\r\n</ul>\r\n</div>\r\n<div class=\"col-md-3\">\r\n<ul>\r\n<li><span style=\"font-size: 12pt;\"><strong>SEMESTER-2</strong></span></li>\r\n<li><span style=\"font-size: 12pt;\">Computer Application-2</span></li>\r\n<li><span style=\"font-size: 12pt;\">Basic Electronics</span></li>\r\n<li><span style=\"font-size: 12pt;\">Computer Workshop Practice</span></li>\r\n<li><span style=\"font-size: 12pt;\">Physics-1</span></li>\r\n<li><span style=\"font-size: 12pt;\">Mathematics-2</span></li>\r\n<li><span style=\"font-size: 12pt;\">Bangla</span></li>\r\n<li><span style=\"font-size: 12pt;\">Physical &amp; Life Skill Education</span></li>\r\n</ul>\r\n</div>\r\n<div class=\"col-md-3\">\r\n<ul>\r\n<li><span style=\"font-size: 12pt;\"><strong>SEMESTER-3</strong></span></li>\r\n<li><span style=\"font-size: 12pt;\">Programming in C</span></li>\r\n<li><span style=\"font-size: 12pt;\">Web Design</span></li>\r\n<li><span style=\"font-size: 12pt;\">Digital Electronics-1</span></li>\r\n<li><span style=\"font-size: 12pt;\">Electrical Device &amp; Circuits</span></li>\r\n<li><span style=\"font-size: 12pt;\">Mathematics-3</span></li>\r\n<li><span style=\"font-size: 12pt;\">Physics-2</span></li>\r\n<li><span style=\"font-size: 12pt;\">Social Science</span></li>\r\n</ul>\r\n</div>\r\n<div class=\"col-md-3\">\r\n<ul>\r\n<li><span style=\"font-size: 12pt;\"><strong>SEMESTER-4</strong></span></li>\r\n<li><span style=\"font-size: 12pt;\">Object Oriented Programming in C++</span></li>\r\n<li><span style=\"font-size: 12pt;\">Graphic Design</span></li>\r\n<li><span style=\"font-size: 12pt;\">Data Structure &amp; Algorithm</span></li>\r\n<li><span style=\"font-size: 12pt;\">Web Development</span></li>\r\n<li><span style=\"font-size: 12pt;\">Digital Electronics-2</span></li>\r\n<li><span style=\"font-size: 12pt;\">Electrical Machines</span></li>\r\n<li><span style=\"font-size: 12pt;\">Discrete Mathematics</span></li>\r\n</ul>\r\n</div>\r\n</div>\r\n<div class=\"row\">\r\n<div class=\"col-md-3\">\r\n<ul>\r\n<li><span style=\"font-size: 12pt;\"><strong>SEMESTER-5</strong></span></li>\r\n<li><span style=\"font-size: 12pt;\">Programming in C#</span></li>\r\n<li><span style=\"font-size: 12pt;\">Computer System Software</span></li>\r\n<li><span style=\"font-size: 12pt;\">Database Management System</span></li>\r\n<li><span style=\"font-size: 12pt;\">E-commerce &amp; CMS</span></li>\r\n<li><span style=\"font-size: 12pt;\">Web Development Project</span></li>\r\n<li><span style=\"font-size: 12pt;\">Book Keeping &amp; Accounting</span></li>\r\n<li><span style=\"font-size: 12pt;\">Environmental Management</span></li>\r\n</ul>\r\n</div>\r\n<div class=\"col-md-3\">\r\n<ul>\r\n<li><span style=\"font-size: 12pt;\"><strong>SEMESTER-6</strong></span></li>\r\n<li><span style=\"font-size: 12pt;\">Programming in JAVA</span></li>\r\n<li><span style=\"font-size: 12pt;\">Microprocessor &amp; Microcomputer</span></li>\r\n<li><span style=\"font-size: 12pt;\">Data Communication &amp; Computer Network</span></li>\r\n<li><span style=\"font-size: 12pt;\">Computer Architecture &amp; Peripherals</span></li>\r\n<li><span style=\"font-size: 12pt;\">Database Management System Project</span></li>\r\n<li><span style=\"font-size: 12pt;\">Computer Servicing &amp; Maintenance</span></li>\r\n<li><span style=\"font-size: 12pt;\">Industrial Management</span></li>\r\n</ul>\r\n</div>\r\n<div class=\"col-md-3\">\r\n<ul>\r\n<li><span style=\"font-size: 12pt;\"><strong>SEMESTER-7</strong></span></li>\r\n<li><span style=\"font-size: 12pt;\">Embedded System &amp; PLC</span></li>\r\n<li><span style=\"font-size: 12pt;\">Mobile Apps Development</span></li>\r\n<li><span style=\"font-size: 12pt;\">Network Administration &amp; Management</span></li>\r\n<li><span style=\"font-size: 12pt;\">Digital Marketing Technology</span></li>\r\n<li><span style=\"font-size: 12pt;\">Computer Engineering Project</span></li>\r\n<li><span style=\"font-size: 12pt;\">Information Management and Security</span></li>\r\n<li><span style=\"font-size: 12pt;\">Entrepreneurship</span></li>\r\n<li><span style=\"font-size: 12pt;\">Electrical Engineering Project</span></li>\r\n</ul>\r\n</div>\r\n<div class=\"col-md-3\">\r\n<ul>\r\n<li><span style=\"font-size: 12pt;\"><strong>SEMESTER-8</strong></span></li>\r\n<li><span style=\"font-size: 12pt;\">Industrial Training</span></li>\r\n</ul>\r\n</div>\r\n</div>\r\n<p>&nbsp;</p>', 'prince-311239-08.jpg', '2024-02-08');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `board`
 --
 
@@ -393,7 +417,6 @@ INSERT INTO `contact` (`id`, `user_id`, `phone`, `email`, `address`, `userPic`) 
 
 CREATE TABLE `contact_info` (
   `id` int(30) NOT NULL,
-  `user_id` int(200) NOT NULL,
   `name` varchar(200) NOT NULL,
   `email` varchar(200) NOT NULL,
   `phone` varchar(200) NOT NULL,
@@ -406,9 +429,36 @@ CREATE TABLE `contact_info` (
 -- Dumping data for table `contact_info`
 --
 
-INSERT INTO `contact_info` (`id`, `user_id`, `name`, `email`, `phone`, `subject`, `message`, `entry_date`) VALUES
-(20, 140, 'Md. Samiul alom', 'samiulbdb@gmail.com', '01751-891037', 'I Need 10 Box Asmon ', 'I Need 10 Box Asmon ', '2020-05-28'),
-(21, 140, 'Fahim', 'sanu@gmail.com', '01751-891037', 'I Need 10 Box Asmon', 'afshoasjfas', '2020-06-02');
+INSERT INTO `contact_info` (`id`, `name`, `email`, `phone`, `subject`, `message`, `entry_date`) VALUES
+(58, 'Stone Maddox', 'fawalog@mailinator.com', '22', '', '', '0000-00-00'),
+(59, 'Mona May', 'puvu@mailinator.com', '+1 (836) 899-5359', 'Distinctio Voluptas', 'Veniam nobis nemo v', '0000-00-00');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `course_apply`
+--
+
+CREATE TABLE `course_apply` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `phone` int(11) NOT NULL,
+  `course` varchar(255) NOT NULL,
+  `course_type` varchar(255) NOT NULL,
+  `entry_date` datetime NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `course_apply`
+--
+
+INSERT INTO `course_apply` (`id`, `name`, `email`, `phone`, `course`, `course_type`, `entry_date`) VALUES
+(32, 'Stone Maddox', 'fawalog@mailinator.com', 22, 'Diploma in Civil Engineering', 'online', '2024-02-11 17:56:36'),
+(33, 'Dana Potts', 'buqapoc@mailinator.com', 84, 'Computer Science Engineering', 'offline', '2024-02-11 17:58:53'),
+(34, 'Ebony Velez', 'fixeqys@mailinator.com', 23, 'Diploma in Medical Assistant', 'online', '2024-02-11 17:59:02'),
+(35, 'Jesse Perry', 'xunuvilet@mailinator.com', 31, '', 'offline', '2024-02-11 18:00:03'),
+(36, 'Rhea Tanner', 'miqody@mailinator.com', 98, '', 'offline', '2024-02-11 18:00:46');
 
 -- --------------------------------------------------------
 
@@ -734,6 +784,28 @@ INSERT INTO `expense_other` (`id`, `user_id`, `expense_name`, `expense_cost`, `r
 (7, 140, 'Nasta Tea 4-cup', '20', 'ss', '2022-05-29'),
 (8, 140, 'Biscuit 2Pack', '40', 'aa', '2022-05-30'),
 (9, 140, 'Nasta Tea 4-cup', '55', 'aff', '2022-05-31');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `faq_section`
+--
+
+CREATE TABLE `faq_section` (
+  `id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `details` text NOT NULL,
+  `date` date NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `faq_section`
+--
+
+INSERT INTO `faq_section` (`id`, `user_id`, `title`, `details`, `date`) VALUES
+(1, 140, 'Consequuntur laudant', 'Ut laborum irure tem', '2024-02-08'),
+(3, 140, 'Iste est velit qui ', 'Sint excepteur volu', '2024-02-08');
 
 -- --------------------------------------------------------
 
@@ -1472,6 +1544,37 @@ INSERT INTO `publish_result_routine` (`id`, `user_id`, `type`, `title`, `userPic
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `seo_section`
+--
+
+CREATE TABLE `seo_section` (
+  `id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `type` varchar(255) NOT NULL,
+  `keyword` mediumtext NOT NULL,
+  `description` mediumtext NOT NULL,
+  `author` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `seo_section`
+--
+
+INSERT INTO `seo_section` (`id`, `user_id`, `type`, `keyword`, `description`, `author`) VALUES
+(1, 140, 'Home', 'Nostrud voluptatem ', 'Eum proident exerci', 'Voluptate ullam numq'),
+(5, 140, 'About', 'Adipisci excepteur u', 'Error amet quidem e', 'Pariatur Velit dolo'),
+(6, 140, 'Team', 'Dicta est itaque mai', 'Fugit esse id dol', 'Dolore porro consect'),
+(7, 140, 'Teacher', 'In et veniam sed nu', 'Laborum nostrud mole', 'Voluptas magna sint'),
+(8, 140, 'Student', 'Molestiae adipisci c', 'Tempor anim eum est ', 'Dolores consequatur'),
+(9, 140, 'Course', 'Qui dolor omnis minu', 'Veniam dolor suscip', 'Soluta corporis unde'),
+(10, 140, 'Gallery', 'Laborum labore facil', 'Ea culpa esse fuga', 'Dolor reprehenderit '),
+(11, 140, 'Blog', 'Aliquid rerum reicie', 'Rerum ut placeat mi', 'Ad sunt similique i'),
+(12, 140, 'Blog Details', 'Aliqua Eum et aut s', 'Aut deserunt quia ut', 'Fugiat sed inventor'),
+(13, 140, 'Contact', 'Nobis quia error ad ', 'Modi a veniam esse', 'Atque dicta praesent');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `service`
 --
 
@@ -1567,9 +1670,10 @@ CREATE TABLE `slider_section` (
 --
 
 INSERT INTO `slider_section` (`id`, `user_id`, `slider_title`, `slider_subtitle`, `userPic`) VALUES
-(1, 140, 'Welcome To Prince Education Group', 'A Better Name Of Education Group', '698548.jpg'),
-(2, 140, 'Diploma In Education Engineering', 'Diploma In Education Engineering', '907634.jpg'),
-(3, 140, 'Diploma In MATS / Pharmacy / Dentist / Nursing', 'Diploma In MATS / Pharmacy / Dentist / Nursing', '812016.jpg');
+(1, 140, 'Welcome To Prince Education Group', 'A Better Name Of Education Group', 'prince-143601-moral-korean.jpg'),
+(2, 140, 'Diploma In Education Engineering', 'Diploma In Education Engineering', 'prince-425165-ielts.jpg'),
+(3, 140, 'Diploma In MATS / Pharmacy / Dentist / Nursing', 'Diploma In MATS / Pharmacy / Dentist / Nursing', 'prince-3880-banners.jpg'),
+(9, 140, 'Moral', 'Moral', 'prince-272868-moral-bb.png');
 
 -- --------------------------------------------------------
 
@@ -1613,7 +1717,7 @@ CREATE TABLE `stats` (
 INSERT INTO `stats` (`st_id`, `user_id`, `st_name`, `st_num`) VALUES
 (1, 140, 'Teachers', '27'),
 (2, 140, 'Courses', '30'),
-(3, 140, 'Students', '2000'),
+(3, 140, '+ Trained Students', '200'),
 (4, 140, 'Awards Achieved', '20');
 
 -- --------------------------------------------------------
@@ -1790,6 +1894,51 @@ INSERT INTO `stuff_details` (`id`, `userid`, `own_name`, `business_name`, `statu
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `success_student_section`
+--
+
+CREATE TABLE `success_student_section` (
+  `id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `details` mediumtext NOT NULL,
+  `userPic` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `success_student_section`
+--
+
+INSERT INTO `success_student_section` (`id`, `user_id`, `name`, `title`, `details`, `userPic`) VALUES
+(4, 140, 'Byron Blanchard', 'Magnam sed ipsam exe', 'Est eligendi qui as', 'prince-882685-team4.jpg'),
+(5, 140, 'Janna Mcconnell', 'Eius ea cillum dolor', 'Voluptates est ad e', 'prince-181884-team1.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `teacher_section`
+--
+
+CREATE TABLE `teacher_section` (
+  `id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `teacher_title` varchar(255) NOT NULL,
+  `teacher_subtitle` varchar(255) NOT NULL,
+  `userPic` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `teacher_section`
+--
+
+INSERT INTO `teacher_section` (`id`, `user_id`, `teacher_title`, `teacher_subtitle`, `userPic`) VALUES
+(2, 140, 'Ipsum sed inventore', 'Voluptas autem culpa', 'prince-88905-team1.jpg'),
+(3, 140, 'Et culpa laudantium', 'Odio qui hic dolor n', 'prince-901001-team4.jpg');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `team_section`
 --
 
@@ -1806,10 +1955,10 @@ CREATE TABLE `team_section` (
 --
 
 INSERT INTO `team_section` (`id`, `user_id`, `team_title`, `team_subtitle`, `userPic`) VALUES
-(18, 140, 'Teacher - 01', 'Teacher', '931875.jpg'),
-(19, 140, 'Teacher - 02', 'Teacher', 'prince-23288-t2.jpg'),
-(20, 140, 'Teacher - 03', 'Teacher ', 'prince-729416-t3.jpg'),
-(21, 140, 'Teacher - 04', 'Teacher ', 'prince-992248-t4.jpg');
+(18, 140, 'Teacher - 01', 'Teacher', 'prince-637383-team1.jpg'),
+(19, 140, 'Teacher - 02', 'Teacher', 'prince-629526-team2.jpg'),
+(20, 140, 'Teacher - 03', 'Teacher ', 'prince-835953-team3.jpg'),
+(21, 140, 'Teacher - 04', 'Teacher ', 'prince-702325-team4.jpg');
 
 -- --------------------------------------------------------
 
@@ -1831,9 +1980,9 @@ CREATE TABLE `testimonial` (
 --
 
 INSERT INTO `testimonial` (`ts_id`, `user_id`, `name`, `position`, `details`, `userPic`) VALUES
-(2, 140, 'Mahmuda Begum', 'Senior Stuff Nurse', '<div style=\"font-family: Consolas, \" courier=\"\" new\",=\"\" monospace;=\"\" line-height:=\"\" 22px;=\"\" white-space:=\"\" pre;\"=\"\"><div style=\"font-family: Consolas, &quot;Courier New&quot;, monospace; line-height: 22px; white-space: pre;\">As a pharmacy student, I am grateful for the exceptional education provided by my college. The curriculum blends scientific knowledge with practical skills, equipping me to serve as a trusted healthcare provider. The supportive faculty, cutting-edge facilities, and diverse clinical experiences have prepared me to make a positive impact on patient care.</div></div>', '279417.jpg'),
-(3, 140, 'Sabbir Ahmmed', 'Pharmacist BSMMU', '<div style=\"font-family: Consolas, \" courier=\"\" new\",=\"\" monospace;=\"\" line-height:=\"\" 22px;=\"\" white-space:=\"\" pre;\"=\"\"><div style=\"font-family: Consolas, &quot;Courier New&quot;, monospace; line-height: 22px; white-space: pre;\">Being a pathology student at my college has been an enlightening experience. The comprehensive curriculum, state-of-the-art laboratories, and expert guidance from faculty members have nurtured my passion for understanding disease processes. The collaborative environment and research opportunities have prepared me for a promising career in diagnostic medicine.</div></div>', '197611.jpg'),
-(4, 140, 'Al Amin', 'Medical Technologist', '<div style=\"font-family: Consolas, \" courier=\"\" new\",=\"\" monospace;=\"\" line-height:=\"\" 22px;=\"\" white-space:=\"\" pre;\"=\"\"><div style=\"font-family: Consolas, \" courier=\"\" new\",=\"\" monospace;=\"\" line-height:=\"\" 22px;=\"\" white-space:=\"\" pre;\"=\"\"><b>My college</b> has been instrumental in shaping me as a skilled <u><b>medical technologis</b></u>t. The rigorous training, emphasis on laboratory techniques, and exposure to advanced technologies have honed my diagnostic skills. The supportive faculty and hands-on experiences have prepared me to excel in the dynamic field of medical diagnostics.</div></div>', '218425.jpg');
+(2, 140, 'Mahmuda Begum', 'Senior Stuff Nurse', '<div style=\"font-family: Consolas, \" courier=\"\" new\",=\"\" monospace;=\"\" line-height:=\"\" 22px;=\"\" white-space:=\"\" pre;\"=\"\"><div style=\"font-family: Consolas, \"Courier New\", monospace; line-height: 22px; white-space: pre;\">As a pharmacy student, I am grateful for the exceptional education provided by my college. The curriculum blends scientific knowledge with practical skills, equipping me to serve as a trusted healthcare provider. The supportive faculty, cutting-edge facilities, and diverse clinical experiences have prepared me to make a positive impact on patient care.</div></div>', '33621.jpg'),
+(3, 140, 'Sabbir Ahmmed', 'Pharmacist BSMMU', '<div style=\"font-family: Consolas, \" courier=\"\" new\",=\"\" monospace;=\"\" line-height:=\"\" 22px;=\"\" white-space:=\"\" pre;\"=\"\"><div style=\"font-family: Consolas, \"Courier New\", monospace; line-height: 22px; white-space: pre;\">Being a pathology student at my college has been an enlightening experience. The comprehensive curriculum, state-of-the-art laboratories, and expert guidance from faculty members have nurtured my passion for understanding disease processes. The collaborative environment and research opportunities have prepared me for a promising career in diagnostic medicine.</div></div>', '747542.jpg'),
+(4, 140, 'Al Amin', 'Medical Technologist', '<div style=\"font-family: Consolas, \" courier=\"\" new\",=\"\" monospace;=\"\" line-height:=\"\" 22px;=\"\" white-space:=\"\" pre;\"=\"\"><div style=\"font-family: Consolas, \" courier=\"\" new\",=\"\" monospace;=\"\" line-height:=\"\" 22px;=\"\" white-space:=\"\" pre;\"=\"\"><b>My college</b> has been instrumental in shaping me as a skilled <u><b>medical technologis</b></u>t. The rigorous training, emphasis on laboratory techniques, and exposure to advanced technologies have honed my diagnostic skills. The supportive faculty and hands-on experiences have prepared me to excel in the dynamic field of medical diagnostics.</div></div>', '186360.jpg');
 
 -- --------------------------------------------------------
 
@@ -1979,6 +2128,30 @@ INSERT INTO `vision` (`ms_id`, `user_id`, `name`, `details`, `userPic`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `why_section`
+--
+
+CREATE TABLE `why_section` (
+  `id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `userPic` varchar(255) NOT NULL,
+  `date` date NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `why_section`
+--
+
+INSERT INTO `why_section` (`id`, `user_id`, `title`, `userPic`, `date`) VALUES
+(2, 140, 'Architecto cupiditat', 'prince-601685-stats3.png', '2024-02-08'),
+(3, 140, 'Qui dolor ratione si', 'prince-672744-stats4.png', '2024-02-08'),
+(4, 140, 'Tempore aut sunt r', 'prince-804676-stats1.png', '2024-02-08'),
+(5, 140, 'Aliqua Est debitis ', 'prince-651962-stats4.png', '2024-02-08');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `year_name`
 --
 
@@ -2049,6 +2222,12 @@ ALTER TABLE `bld_grp`
   ADD PRIMARY KEY (`bld_id`);
 
 --
+-- Indexes for table `blog_section`
+--
+ALTER TABLE `blog_section`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `board`
 --
 ALTER TABLE `board`
@@ -2082,6 +2261,12 @@ ALTER TABLE `contact`
 -- Indexes for table `contact_info`
 --
 ALTER TABLE `contact_info`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `course_apply`
+--
+ALTER TABLE `course_apply`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -2154,6 +2339,12 @@ ALTER TABLE `expense`
 -- Indexes for table `expense_other`
 --
 ALTER TABLE `expense_other`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `faq_section`
+--
+ALTER TABLE `faq_section`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -2285,6 +2476,12 @@ ALTER TABLE `publish_result_routine`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `seo_section`
+--
+ALTER TABLE `seo_section`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `service`
 --
 ALTER TABLE `service`
@@ -2339,6 +2536,18 @@ ALTER TABLE `stuff_details`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `success_student_section`
+--
+ALTER TABLE `success_student_section`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `teacher_section`
+--
+ALTER TABLE `teacher_section`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `team_section`
 --
 ALTER TABLE `team_section`
@@ -2385,6 +2594,12 @@ ALTER TABLE `userlog`
 --
 ALTER TABLE `vision`
   ADD PRIMARY KEY (`ms_id`);
+
+--
+-- Indexes for table `why_section`
+--
+ALTER TABLE `why_section`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `year_name`
@@ -2445,6 +2660,12 @@ ALTER TABLE `bld_grp`
   MODIFY `bld_id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
+-- AUTO_INCREMENT for table `blog_section`
+--
+ALTER TABLE `blog_section`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
 -- AUTO_INCREMENT for table `board`
 --
 ALTER TABLE `board`
@@ -2478,7 +2699,13 @@ ALTER TABLE `contact`
 -- AUTO_INCREMENT for table `contact_info`
 --
 ALTER TABLE `contact_info`
-  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
+
+--
+-- AUTO_INCREMENT for table `course_apply`
+--
+ALTER TABLE `course_apply`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 
 --
 -- AUTO_INCREMENT for table `crse_topic`
@@ -2551,6 +2778,12 @@ ALTER TABLE `expense`
 --
 ALTER TABLE `expense_other`
   MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
+-- AUTO_INCREMENT for table `faq_section`
+--
+ALTER TABLE `faq_section`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `gallery`
@@ -2679,6 +2912,12 @@ ALTER TABLE `publish_result_routine`
   MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 
 --
+-- AUTO_INCREMENT for table `seo_section`
+--
+ALTER TABLE `seo_section`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+
+--
 -- AUTO_INCREMENT for table `service`
 --
 ALTER TABLE `service`
@@ -2700,7 +2939,7 @@ ALTER TABLE `skill_section`
 -- AUTO_INCREMENT for table `slider_section`
 --
 ALTER TABLE `slider_section`
-  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `social_media`
@@ -2725,6 +2964,18 @@ ALTER TABLE `students`
 --
 ALTER TABLE `stuff_details`
   MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=767;
+
+--
+-- AUTO_INCREMENT for table `success_student_section`
+--
+ALTER TABLE `success_student_section`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `teacher_section`
+--
+ALTER TABLE `teacher_section`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `team_section`
@@ -2773,6 +3024,12 @@ ALTER TABLE `userlog`
 --
 ALTER TABLE `vision`
   MODIFY `ms_id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `why_section`
+--
+ALTER TABLE `why_section`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `year_name`

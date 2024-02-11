@@ -3,7 +3,6 @@
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Moral Learning Institute</title>
 <link href="http://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous" />
 
@@ -36,9 +35,12 @@
   #faq,
   #about,
   #visions,
-  #video,
-  #team {
+  #video {
     background: var(--bg-light);
+  }
+
+  #team {
+    margin: 0;
   }
 
   #course h4 {
@@ -47,5 +49,56 @@
 
   #course .features15-col-text:hover h4 {
     color: var(--secondary-color);
+  }
+
+  .modal-backdrop {
+    z-index: 99;
+  }
+
+  .modal-body {
+    padding: 0;
+  }
+
+  @media (min-width: 992px) {
+
+    .modal-lg,
+    .modal-xl {
+      max-width: 992px;
+    }
+  }
+
+  @media (max-width: 992px) {
+
+    .apply .btn {
+      width: 100%;
+    }
+  }
+
+  .apply {
+    background: url('assets/images/banner.png');
+    background-position: center;
+    background-size: cover;
+    padding: 3% 0 3% 3%;
+    overflow: hidden;
+  }
+
+  .apply-left {
+    text-align: center;
+    color: #fff;
+    margin-top: 4%;
+  }
+
+  .apply-right {
+    background: #f8f9fa;
+    border-top-left-radius: 10% 50%;
+    border-bottom-left-radius: 10% 50%;
+  }
+
+  .apply-left img {
+    margin-bottom: 5%;
+  }
+
+  .apply .apply-form {
+    padding: 10%;
   }
 </style>

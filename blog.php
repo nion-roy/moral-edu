@@ -3,11 +3,20 @@
 
 
 <head>
-  <meta name="author" content="">
-  <meta name="keyword" content="">
-  <meta name="description" content="">
-
   <?php include 'header-link.php' ?>
+
+  <?php
+  $query_seo = "SELECT * FROM seo_section WHERE type = 'blog'";
+  $result_seo = mysqli_query($con, $query_seo);
+  $row = mysqli_fetch_assoc($result_seo);
+  ?>
+
+  <meta name="author" content="<?= $row['author'] ?>">
+  <meta name="keyword" content="<?= $row['keyword'] ?>">
+  <meta name="description" content="<?= $row['description'] ?>">
+  <title><?= $row['title'] ?></title>
+  <link rel="canonical" href="<?= $row['canonical_link'] ?>" />
+
 </head>
 
 <body>
@@ -35,135 +44,40 @@
   </div>
   <!-- blog section -->
   <div class="w3l-grids-block-5 py-5">
-    <section id="grids5-block" class="pt-md-4 pb-md-5 mb-5">
+    <section id="grids5-block">
       <div class="container">
-        <div class="title-main text-center mx-auto mb-4 rounded-pill border" data-aos="fade-top" data-aos-anchor-placement="top-bottom" data-aos-delay="100">
-          <h3 class="title-big">Our <span class="text-success"> Blog <span class="text-danger"> Posts </span></h3>
-        </div>
 
-        <div class="row mt-sm-5 pt-lg-2">
-          <div class="col-lg-4 col-sm-6 my-3" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="100">
-            <div class=" grids5-info">
-              <a href="blog-single"><img src="assets/images/blog4.jpg" alt="" /></a>
-              <div class="blog-info">
-                <h5>October 3, 2019</h5>
-                <h4><a href="blog-single">Mostly Interesting UX/UI Designing</a></h4>
-                <p>Donec sed tempus enim, a congue risus. Pellentesque euismod massa a quam
-                  viverra interdum.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-sm-6 my-3" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="200">
-            <div class=" grids5-info">
-              <a href="blog-single"><img src="assets/images/blog5.jpg" alt="" /></a>
-              <div class="blog-info">
-                <h5>October 6, 2019</h5>
-                <h4><a href="blog-single">Growth Mindsets for Online Learners </a></h4>
-                <p>Donec sed tempus enim, a congue risus. Pellentesque euismod massa a quam
-                  viverra interdum.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-sm-6 my-3" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="300">
-            <div class=" grids5-info">
-              <a href="blog-single"><img src="assets/images/blog6.jpg" alt="" /></a>
-              <div class="blog-info">
-                <h5>October 7, 2019</h5>
-                <h4><a href="blog-single">Super fast & user friendly interface</a></h4>
-                <p>Donec sed tempus enim, a congue risus. Pellentesque euismod massa a quam
-                  viverra interdum.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-sm-6 my-3" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="400">
-            <div class=" grids5-info">
-              <a href="blog-single"><img src="assets/images/blog2.jpg" alt="" /></a>
-              <div class="blog-info">
-                <h5>November 6, 2019</h5>
-                <h4><a href="blog-single">Super fast & user friendly interface</a></h4>
-                <p>Donec sed tempus enim, a congue risus. Pellentesque euismod massa a quam
-                  viverra interdum.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-sm-6 my-3" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="500">
-            <div class=" grids5-info">
-              <a href="blog-single"><img src="assets/images/blog1.jpg" alt="" /></a>
-              <div class="blog-info">
-                <h5>November 7, 2019</h5>
-                <h4><a href="blog-single">Mostly Interesting UX/UI Designing</a></h4>
-                <p>Donec sed tempus enim, a congue risus. Pellentesque euismod massa a quam
-                  viverra interdum.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-sm-6 my-3" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="600">
-            <div class=" grids5-info">
-              <a href="blog-single"><img src="assets/images/blog3.jpg" alt="" /></a>
-              <div class="blog-info">
-                <h5>November 8, 2019</h5>
-                <h4><a href="blog-single">Growth Mindsets for Online Learners</a></h4>
-                <p>Donec sed tempus enim, a congue risus. Pellentesque euismod massa a quam
-                  viverra interdum.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-sm-6 my-3" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="700">
-            <div class=" grids5-info">
-              <a href="blog-single"><img src="assets/images/blog5.jpg" alt="" /></a>
-              <div class="blog-info">
-                <h5>December 2, 2019</h5>
-                <h4><a href="blog-single">Mostly Interesting UX/UI Designing</a></h4>
-                <p>Donec sed tempus enim, a congue risus. Pellentesque euismod massa a quam
-                  viverra interdum.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-sm-6 my-3" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="800">
-            <div class=" grids5-info">
-              <a href="blog-single"><img src="assets/images/blog6.jpg" alt="" /></a>
-              <div class="blog-info">
-                <h5>December 4, 2019</h5>
-                <h4><a href="blog-single">Super fast & user friendly interface</a></h4>
-                <p>Donec sed tempus enim, a congue risus. Pellentesque euismod massa a quam
-                  viverra interdum.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-sm-6 my-3" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="900">
-            <div class=" grids5-info">
-              <a href="blog-single"><img src="assets/images/blog4.jpg" alt="" /></a>
-              <div class="blog-info">
-                <h5>December 9, 2019</h5>
-                <h4><a href="blog-single">Growth Mindsets for Online Learners</a></h4>
-                <p>Donec sed tempus enim, a congue risus. Pellentesque euismod massa a quam
-                  viverra interdum.</p>
-              </div>
-            </div>
-          </div>
-        </div>
+        <div class="row">
+          <?php
+          $sl = 0;
+          $query_blog = "SELECT * FROM blog_section ORDER BY id DESC";
+          $result_blog = mysqli_query($con, $query_blog);
 
-        <!-- pagination -->
-        <div class="pagination-style">
-          <ul>
-            <li> <a href="#none" class="not-allowed" disabled="">
-                <span class="fa fa-angle-double-left" aria-hidden="true"></span>
-              </a>
-            </li>
-            <li><a class="active" href="#page">1</a></li>
-            <li>
-              <a href="#page">2</a>
-            </li>
-            <li>
-              <a href="#page">3</a>
-            </li>
-            <li>
-              <a href="#page"><span class="fa fa-angle-double-right" aria-hidden="true"></span>
-              </a>
-            </li>
-          </ul>
+          if (mysqli_num_rows($result_blog) > 0) {
+            while ($row = mysqli_fetch_assoc($result_blog)) {
+              $title = strlen($row['title']) > 60 ? substr($row['title'], 0, 30) . '...' : $row['title'];
+              $details = strlen($row['details']) > 60 ? substr($row['details'], 0, 120) . '...' : $row['details'];
+          ?>
+              <div class="col-lg-4 col-sm-6 my-3" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="<?= ++$sl ?>00">
+                <div class="grids5-info">
+                  <a href="blog-single?id=<?= $row['id'] ?>"><img src="moral-edu/user/user_images/<?= $row['userPic'] ?>" alt="" /></a>
+                  <div class="blog-info">
+                    <h5><?= $row['date'] ?></h5>
+                    <h4><a href="blog-single?id=<?= $row['id'] ?>"><?= $title ?></a></h4>
+                    <p><?= $details ?></p>
+                  </div>
+                </div>
+              </div>
+
+          <?php
+            }
+          } else {
+            echo "No blog found<br>";
+          }
+          ?>
+
+
         </div>
-        <!-- //pagination -->
       </div>
     </section>
   </div>

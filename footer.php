@@ -98,7 +98,6 @@
   })
 </script>
 
-
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     // Initialize each gallery container separately

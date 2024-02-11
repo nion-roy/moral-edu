@@ -16,7 +16,7 @@
           while ($row = mysqli_fetch_assoc($result_course)) {
         ?>
             <div class="col-lg-4 col-md-6 features15-col-text" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="<?= ++$sl ?>00">
-              <a href="courses-details" class="d-flex feature-unit align-items-center bg-white">
+              <a href="courses-details?view=<?= $row['sv_id'] ?>" class="d-flex feature-unit align-items-center bg-white">
                 <div class="col-12 text-center">
                   <div class="features15-info">
                     <img class="img-fluid" src="moral-edu/user/user_images/<?php echo $row['userPic']; ?>" alt="<?= $row['sv_name'] ?>">
