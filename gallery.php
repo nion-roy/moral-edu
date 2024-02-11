@@ -2,11 +2,19 @@
 <html lang="en">
 
 <head>
-  <meta name="author" content="">
-  <meta name="keyword" content="">
-  <meta name="description" content="">
-
   <?php include 'header-link.php' ?>
+
+  <?php
+  $query_seo = "SELECT * FROM seo_section WHERE type = 'gallery'";
+  $result_seo = mysqli_query($con, $query_seo);
+  $row = mysqli_fetch_assoc($result_seo);
+  ?>
+
+  <meta name="author" content="<?= $row['author'] ?>">
+  <meta name="keyword" content="<?= $row['keyword'] ?>">
+  <meta name="description" content="<?= $row['description'] ?>">
+  <title><?= $row['title'] ?></title>
+  <link rel="canonical" href="<?= $row['canonical_link'] ?>" />
 
 </head>
 
@@ -28,20 +36,11 @@
       </div>
     </section>
   </div>
-  <!-- inner banner -->
 
-  <!-- gallery -->
   <section class="gallery py-5" id="gallery">
-    <div class="container py-md-4 py-3">
-
-      <div class="title-main text-center mx-auto mb-md-4 rounded-pill border" data-aos="fade-top" data-aos-anchor-placement="top-bottom" data-aos-delay="100">
-        <h3 class="title-big">Our <span class="text-success"> Gallery</h3>
-      </div>
-
-
+    <div class="container">
       <div class="main-grid-gallery">
-        <div class="row mt-5 mx-0 gallery-container" id="gallery1">
-
+        <div class="row mx-0 gallery-container" id="gallery1">
 
 
           <?php
@@ -54,11 +53,16 @@
           ?>
 
               <div class="col-lg-4 col-sm-6 col-12 my-3 gallery-item" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="<?= ++$sl ?>00" data-src="moral-edu/user/user_images/<?= $row['userPic'] ?>">
-                <a href="javascript:void(0)">
-                  <div class="gallery-img">
-                    <img class="img-fluid rounded shadow" src="moral-edu/user/user_images/<?= $row['userPic'] ?>" />
-                  </div>
-                </a>
+                <div class="rounded overflow-hidden">
+                  <a href="javascript:void(0)">
+                    <div class="gallery-img">
+                      <img class="img-fluid" src="moral-edu/user/user_images/<?= $row['userPic'] ?>" />
+                    </div>
+                    <div class="blog-info py-4 bg-white text-center">
+                      <h4><?= $row['title'] ?></h4>
+                    </div>
+                  </a>
+                </div>
               </div>
           <?php
             }
@@ -72,8 +76,6 @@
       </div>
     </div>
   </section>
-  <!-- gallery -->
 
-  <!-- footer -->
+
   <?php include 'footer.php' ?>
-  <!-- footer -->

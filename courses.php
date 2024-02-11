@@ -6,11 +6,21 @@
 
 
 <head>
-  <meta name="author" content="">
-  <meta name="keyword" content="">
-  <meta name="description" content="">
 
   <?php include 'header-link.php' ?>
+
+  <?php
+  $query_seo = "SELECT * FROM seo_section WHERE type = 'course'";
+  $result_seo = mysqli_query($con, $query_seo);
+  $row = mysqli_fetch_assoc($result_seo);
+  ?>
+
+  <meta name="author" content="<?= $row['author'] ?>">
+  <meta name="keyword" content="<?= $row['keyword'] ?>">
+  <meta name="description" content="<?= $row['description'] ?>">
+  <title><?= $row['title'] ?></title>
+  <link rel="canonical" href="<?= $row['canonical_link'] ?>" />
+
 
 </head>
 

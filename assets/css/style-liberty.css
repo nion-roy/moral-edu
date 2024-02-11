@@ -14060,7 +14060,8 @@ body,
 html {
   margin: 0;
   padding: 0;
-  background: var(--bg-color);
+  background: #f2e9e9;
+  / * background: var(--bg-color); */
   color: var(--font-color);
   font-family: 'Roboto', sans-serif;
 }
@@ -14092,13 +14093,18 @@ button,
   align-self: end;
 }
 
-button,
-input,
+button, 
 select,
 label,
 li,
 span {
   -webkit-appearance: none;
+  outline: none;
+  font-family: 'Roboto', sans-serif;
+}
+
+input
+{ 
   outline: none;
   font-family: 'Roboto', sans-serif;
 }

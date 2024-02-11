@@ -3,11 +3,20 @@
 
   <head>
 
-    <meta name="author" content="">
-    <meta name="keyword" content="">
-    <meta name="description" content="">
-
     <?php include 'header-link.php' ?>
+
+    <?php
+    $query_seo = "SELECT * FROM seo_section WHERE type = 'home'";
+    $result_seo = mysqli_query($con, $query_seo);
+    $row = mysqli_fetch_assoc($result_seo);
+    ?>
+
+    <meta name="author" content="<?= $row['author'] ?>">
+    <meta name="keyword" content="<?= $row['keyword'] ?>">
+    <meta name="description" content="<?= $row['description'] ?>">
+    <title><?= $row['title'] ?></title>
+    <link rel="canonical" href="<?= $row['canonical_link'] ?>" />
+
 
 
     <style>
@@ -26,37 +35,27 @@
 
   <body>
 
-    <!-- header -->
     <?php include 'nav-bar.php' ?>
-    <!-- header -->
 
-    <!-- banner section -->
     <?php include 'banner_header.php' ?>
-    <!-- banner section -->
 
-    <!-- course section -->
     <?php include 'home_course.php' ?>
-    <!-- course section -->
 
-    <!-- about section -->
     <?php include 'home_why_choose_us.php' ?>
-    <!-- about section -->
 
-    <!-- why choose us section -->
-    <?php include 'home_faq.php' ?>
-    <!-- why choose us section -->
+    <?php include 'stats_home.php' ?>
 
-    <!-- teacher block -->
     <?php include 'home_teacher.php' ?>
-    <!-- teacher block -->
 
-    <!-- testimonials -->
     <?php include 'home_testimonial.php' ?>
-    <!-- testimonials -->
 
-    <!-- blog section -->
-    <?php include 'home_office_tour.php' ?>
-    <!-- blog section -->
+    <? php // include 'home_office_tour.php' 
+    ?>
+
+    <?php include 'gallery-home.php' ?>
+
+
+    <?php include 'home_faq.php' ?>
 
     <!-- footer -->
     <?php include 'footer.php' ?>

@@ -56,71 +56,56 @@
   <div class="container py-5">
     <div class="row align-items-center">
 
-      <div class="col-lg-6 about-right-faq align-self mb-lg-0 mb-5 pl-xl-5" data-aos="fade-down" data-aos-anchor-placement="top-bottom" data-aos-delay="100">
+      <div class="col-lg-9 about-right-faq align-self mb-lg-0 mb-5 pl-xl-5" data-aos="fade-down" data-aos-anchor-placement="top-bottom" data-aos-delay="100">
         <h3 class="title-big mb-3">Frequently Asked Question</h3>
         <p class="">Lorem ipsum viverra feugiat. Pellen tesque libero ut justo,
           ultrices in ligula. Semper at tempufddfel. Lorem ipsum dolor sit amet.
           Lorem ipsum viverra feugiat.</p>
 
+      </div>
+
+      <div class="col-lg-3 left-wthree-img pr-lg-4" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="100">
+        <img src="assets/images/img1.jpg" alt="" class="img-fluid">
+      </div>
+	  
+	  <div class="col-lg-12 about-right-faq align-self mb-lg-0 mb-5 pl-xl-5" data-aos="fade-down" data-aos-anchor-placement="top-bottom" data-aos-delay="100">
+    
         <div id="main">
           <div class="accordion" id="faq">
-            <div class="card">
-              <div class="card-header" id="faqhead1">
-                <a href="#" class="btn btn-header-link collapsed" style="color: inherit;" data-toggle="collapse" data-target="#faq1">Why Choose Us</a>
-              </div>
 
-              <div id="faq1" class="collapse" aria-labelledby="faqhead1" data-parent="#faq">
-                <div class="card-body">
-                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
-                  moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
-                  Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
-                  shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea
-                  proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim
-                  aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                </div>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-header" id="faqhead2">
-                <a href="#" class="btn btn-header-link collapsed" style="color: inherit;" data-toggle="collapse" data-target="#faq2">Why Choose Us</a>
-              </div>
+            <?php
+            $sl = 0;
+            $query_why = "SELECT * FROM faq_section ORDER BY id asc";
+            $result_why = mysqli_query($con, $query_why);
 
-              <div id="faq2" class="collapse" aria-labelledby="faqhead2" data-parent="#faq">
-                <div class="card-body">
-                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
-                  moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
-                  Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
-                  shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea
-                  proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim
-                  aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                </div>
-              </div>
-            </div>
-            <div class="card m-0">
-              <div class="card-header" id="faqhead3">
-                <a href="#" class="btn btn-header-link collapsed" style="color: inherit;" data-toggle="collapse" data-target="#faq3">Why Choose Us</a>
-              </div>
+            if (mysqli_num_rows($result_why) > 0) {
+              while ($row = mysqli_fetch_assoc($result_why)) {
+            ?>
 
-              <div id="faq3" class="collapse" aria-labelledby="faqhead3" data-parent="#faq">
-                <div class="card-body">
-                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
-                  moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
-                  Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
-                  shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea
-                  proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim
-                  aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                <div class="card">
+                  <div class="card-header" id="faqhead_<?= $row['id'] ?>">
+                    <a href="#" class="btn btn-header-link collapsed" style="color: inherit;" data-toggle="collapse" data-target="#faq_<?= $row['id'] ?>"><strong><?= $row['title'] ?></strong></a>
+                  </div>
+
+                  <div id="faq_<?= $row['id'] ?>" class="collapse" aria-labelledby="faqhead_<?= $row['id'] ?>" data-parent="#faq">
+                    <div class="card-body">
+                   <?= $row['details'] ?>
+				   </div>
+                  </div>
                 </div>
-              </div>
-            </div>
+
+
+            <?php
+              }
+            }
+            ?>
+
           </div>
         </div>
 
 
       </div>
 
-      <div class="col-lg-6 left-wthree-img pr-lg-4" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="100">
-        <img src="assets/images/img1.jpg" alt="" class="img-fluid">
-      </div>
 
     </div>
   </div>
